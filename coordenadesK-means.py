@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Mar 26 08:49:48 2025
+Created on Wed Mar 26 13:56:31 2025
 
 @author: Moi
 """
+
 
 import cv2
 import numpy as np
@@ -33,7 +34,7 @@ def pixel_to_latlon(px_x, px_y, lat_min, lat_max, lon_min, lon_max, width, heigh
     return lat, lon
 
 # Ruta de la imatge amb la màscara de la posidònia (meitat inferior)
-posidonia_image_path = r"C:\Users\Moi\Desktop\tfg\videoimatgesvilanova\posidoniavilanova3juliol20234bandas\codis\K-means_Posidonia_Area.png"
+posidonia_image_path = r"C:\Users\Moi\Desktop\tfg\videoimatgesvilanova\10juriol2018\imatges\K-means_Posidonia_Area.png"
 
 # Comprovar si la imatge existeix a la ruta indicada
 if os.path.exists(posidonia_image_path):
