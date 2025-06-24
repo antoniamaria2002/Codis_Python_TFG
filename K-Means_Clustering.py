@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Mar 24 23:14:25 2025
+Created on Wed Mar 26 13:51:16 2025
 
 @author: Moi
 """
@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from skimage import exposure, morphology
 
 # Ruta de la imatge
-image_path = r"C:\Users\Moi\Desktop\tfg\videoimatgesvilanova\posidoniavilanova3juliol20234bandas\codis\Blue-Nir_resta2023\Blue_Corrected2_cropped.png"
+image_path = r"C:\Users\Moi\Desktop\tfg\videoimatgesvilanova\10juriol2018\imatges\Blue_NIR_resta\Blue_Corrected2_cropped.png"
 
 # Comprovar si la imatge existeix
 if os.path.exists(image_path):
@@ -63,7 +63,7 @@ if os.path.exists(image_path):
         posidonia_mask = morphology.closing(posidonia_mask, selem)
 
         # Guardar la màscara de Posidònia
-        output_directory = r"C:\Users\Moi\Desktop\tfg\videoimatgesvilanova\posidoniavilanova3juliol20234bandas\codis"
+        output_directory = r"C:\Users\Moi\Desktop\tfg\videoimatgesvilanova\10juriol2018\imatges"
         output_posidonia_path = os.path.join(output_directory, "K-means_Posidonia_Area.png")
         cv2.imwrite(output_posidonia_path, posidonia_mask)
         print(f" L'àrea de *Posidònia* s'ha guardat com '{output_posidonia_path}'.")
@@ -83,5 +83,4 @@ if os.path.exists(image_path):
 
 
     print(f" Error: La imatge no existeix a la ruta proporcionada: {image_path}")
-
 
